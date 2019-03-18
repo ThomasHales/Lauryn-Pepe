@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+    <body>
+        <div id="banner">
+            <h1 id="title">Lauryn-Pepe Online Bookstore</h1>
+        </div>
+        <div class="navbar">
+            <a class="active" href="#main">Main Page</a>
+            <a href="#Screen">Shop Screen</a>
+            <a href="contact.html">Contact Us</a>
+            <form id="login">
+                    User: <input type="text" name="username" required>
+                    P/W: <input type="password" name="password" required>
+                    <input type="submit" style="display:none;">
+            </form>
+        </div>
+        <link rel="stylesheet" type="text/css" href="contact.css" />
+        <div class="body">
+          <main>
+            <article>
+              <h1>Contact Us</h1>
+              <div class="tq">
+                <form enctype="text/plain" method="get" action="mailto:hannm@uwindsor.ca">
+                  <fieldset>
+                    <p class="ques">Name</p>
+                    <input type="hidden" name="var" value="value" />
+                    <input type="text" name="field1" /><br />
+                    <p class="ques">Subject</p>
+                    <input type="hidden" name="var" value="value" />
+                    <input type="text" name="field1" /><br />
+                    <p class="ques">Country</p>
+                    <input type="hidden" name="var" value="value" />
+                    <select name="mc">
+                      <option value="val1">Canada</option>
+                      <option value="val2">United States</option>
+                    </select>
+                    <p class="ques">Message</p>
+                    <input type="hidden" name="var" value="value" />
+                    <textarea name="field1" rows="15" cols="45" ></textarea><br />
+                    <input type="submit" name="Button1" value="Submit" />
+                    <input type="reset" value="Reset" />
+                  </fieldset>
+                </form>
+              </div>
+            </article>
+          </main>
+        </div>
+    </body>
+</html>
