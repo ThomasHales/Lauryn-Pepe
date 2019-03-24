@@ -4,5 +4,6 @@ main{
   color: #000;
   background-color: #FFF;
   border-radius: 0.5em;
-  padding: 0.25ex 1em 0.25ex 1em;
+  padding: 1em;
+  margin: 1em; 
 }
