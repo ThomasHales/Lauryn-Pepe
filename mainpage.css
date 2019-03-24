@@ -1,0 +1,30 @@
+.pgbox{
+    background-color: lightgray; 
+    margin: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    display: flex;
+    flex-flow: wrap;  
+}
+
+#head{
+    width: 100%; 
+}
+
+#head h1{
+    font-size: 5em; 
+    padding-bottom: -2em;
+}
+
+#deals{
+    padding-left: 2em;
+}
+
+#deals h1{
+    color: red; 
+}
+
+#prose{
+    width: 70%; 
+    font-size: 2em; 
+}
