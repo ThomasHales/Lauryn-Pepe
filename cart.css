@@ -1,0 +1,15 @@
+main{
+  color: #000;
+  background-color: #FFF;
+  padding: 20px;
+  margin: 10px;  
+}
+
+table{
+  table-layout:fixed;
+  text-align: center;
+}
+
+td{
+  width: 25%;
+}
