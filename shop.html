@@ -2,27 +2,29 @@
 <html>
   <head>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="shop.css">
   </head>
   <body>
       <div id="banner">
           <h1 id="title">Lauryn-Pepe Online Bookstore</h1>
       </div>
       <div class="navbar">
-          <a class="active" href="#main">Main Page</a>
-          <a href="#Screen">Shop Screen</a>
+          <a href="index.html">Main Page</a>
+          <a class="active" href="#Screen">Shop Screen</a>
           <a href="contact.html">Contact Us</a>
-          <form id="login">
-                  User: <input type="text" name="username" required>
-                  P/W: <input type="password" name="password" required>
-                  <input type="submit" style="display:none;">
+          <form id="login" onsubmit="foo()">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required> 
+            <p id="text" style="display: none;"></p>
+            <input type="submit" style="display:none;">
           </form>
       </div>
 
-      <link rel="stylesheet" type="text/css" href="shop.css" />
+      <link rel="stylesheet" type="text/css" href="shop.css">
       <main>
         <div class="mcq">
           <p class="ques">Search by:</p>
-          <input type="hidden" name="var" value="value" />
+          <input type="hidden" name="var" value="value">
           <select name="mc">
             <optgroup label="Author">
               <option value="val1">By Last Name</option>
@@ -39,7 +41,7 @@
             </optgroup>
           </select>
           <div class="button">
-            <input type="submit" name="Button1" value="Search" />
+            <input type="submit" id="submit" name="Button1" value="Search">
           </div>
         </form>
       </div>
@@ -49,5 +51,6 @@
         by Author     $Price </p>
       </div>
     </main>
+    <script type="text/javascript" src="login.js"></script>
   </body>
 </html>

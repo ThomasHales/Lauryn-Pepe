@@ -1,5 +1,5 @@
 document.getElementById("login").addEventListener('submit', function(event){event.preventDefault();});
-window.onload(checkLogin()); 
+window.onload = checkLogin(); 
 
 
 function foo(){
