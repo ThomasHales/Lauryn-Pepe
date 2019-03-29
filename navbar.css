@@ -58,6 +58,21 @@
     margin: 5px; 
 }
 
+/* Style buttons */
+#cart {
+  background-color: #080; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 3px 3px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+#cart:hover {
+  background-color: RoyalBlue;
+}
+
 body{
     margin: 0px; 
     padding: 0px;

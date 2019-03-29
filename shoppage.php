@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   </head>
   <body>
       <div id="banner">
@@ -13,10 +14,12 @@
           <a class="active" href="#Screen">Shop Screen</a>
           <a href="contact.html">Contact Us</a>
           <form id="login" onsubmit="foo()">
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="password" id="password" name="password" placeholder="Password" required> 
-            <p id="text" style="display: none;"></p>
+	    <p id="text" style="display: none;"></p>
+	    <button type="button" id="cart" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i></button>
+            <input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
+            <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
             <input type="submit" style="display:none;">
+	    <button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
           </form>
       </div>
 
