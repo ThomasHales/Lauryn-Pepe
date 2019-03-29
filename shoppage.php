@@ -22,13 +22,12 @@
 
       <link rel="stylesheet" type="text/css" href="shop.css">
       <main>
-        <div class="mcq">
+        <form class="mcq" id="mcq">
           <p class="ques">Search by:</p>
           <input type="hidden" name="var" value="value">
-          <select name="mc">
+          <select name="mc" id="mc">
             <optgroup label="Author">
-              <option value="val1">By Last Name</option>
-              <option value="val2">By First Name</option>
+              <option value="val1">By Name</option>
             </optgroup>
             <optgroup label="Genre">
               <option value="val1">Horror</option>
@@ -45,12 +44,66 @@
           </div>
         </form>
       </div>
-      <div class="books">
-        <img src=" ">
-        <p><a href="template.html">Title</a>
-        by Author     $Price </p>
+      <div id="books" class="books"><div id="book"><img id="bookimg" src=" "><a href="template.html"><p id="details">Title by Author $Price </p></a></div>
       </div>
     </main>
     <script type="text/javascript" src="login.js"></script>
+    <?php include 'shop.php'; ?>
   </body>
 </html>
+
+<style>
+main{
+  width: 100%;
+  flex: 1 1 none;
+  color: #000;
+  background-color: #FFF;
+  border-radius: 0.5em;
+  padding: 0.25ex 1em 0.25ex 1em;
+}
+
+.ques{
+  font-size: 35px;
+  text-align: left;
+}
+
+select{
+  font-size: 2em;
+}
+
+.button #submit{
+  display: flex;
+  border-radius: 5px; 
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 32px;
+  margin-top: 10px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.books{
+  text-align: center; 
+  align: center; 
+  display: flex;
+  flex-flow: row; 
+  flex-wrap: wrap; 
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#book{
+  padding-left: 10px; 
+}
+
+#book a:link{
+  color: black; 
+}
+
+#book a:visited{
+  color: lightgray; 
+}
+</style>
