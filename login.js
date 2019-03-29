@@ -12,14 +12,14 @@ function foo(){
                 document.getElementById("text").innerHTML = this.responseText;
                 document.getElementById("text").style.display = 'inline';
                 if(this.responseText == "Invalid User" || this.responseText == "Invalid Password Format" || this.responseText == "Invalid Username Format"){ //invalidalid User
-					document.getElementById("password").value = "";
-					document.getElementById("text").style.color = "red";
+			document.getElementById("password").value = "";
+			document.getElementById("text").style.color = "red";
                 }else{
-					document.getElementById("username").style.display = 'none';
-                    document.getElementById("password").style.display = 'none';
-					document.getElementById("text").style.color = "black";
-                    document.getElementById("text").style.display = 'inline';
-                    localStorage.setItem("username", username); 
+			document.getElementById("username").style.display = 'none';
+                    	document.getElementById("password").style.display = 'none';
+			document.getElementById("text").style.color = "black";
+                    	document.getElementById("text").style.display = 'inline';
+                    	localStorage.setItem("username", username); 
 				}
             }
         };
@@ -33,17 +33,16 @@ function checkLogin(){
     if(namestored){
         document.getElementById("username").style.display = 'none';
         document.getElementById("password").style.display = 'none';
-		document.getElementById("button").style.display = 'inline';
+	document.getElementById("button").style.display = 'inline';
         document.getElementById("text").style.display = 'inline';
         document.getElementById("text").innerHTML = 'Signed In As: '+namestored;
     }
 }
 
 function signOut(){
-	    document.getElementById("username").style.display = 'inline';
+	document.getElementById("username").style.display = 'inline';
         document.getElementById("password").style.display = 'inline';
         document.getElementById("button").style.display = 'none';
-		document.getElementById("text").style.display = 'none';
-		localStorage.clear();
-	
+	document.getElementById("text").style.display = 'none';
+	localStorage.clear();
 }
