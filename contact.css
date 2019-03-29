@@ -1,9 +1,6 @@
 main{
-  width: 100%;
-  flex: 1 1 none;
   color: #000;
   background-color: #FFF;
-  border-radius: 0.5em;
-  padding: 1em;
-  margin: 1em; 
+  padding: 20px;
+  margin: 10px; 
 }

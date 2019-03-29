@@ -1,39 +1,10 @@
 main{
-  width: 100%;
-  flex: 1 1 none;
   color: #000;
   background-color: #FFF;
-  border-radius: 0.5em;
-  padding: 0.25ex 1em 0.25ex 1em;
+  padding: 20px;
+  margin: 10px; 
 }
 
-.ques{
-  font-size: 35px;
-  text-align: left;
-}
-
-select{
-  font-size: 2em;
-}
-
-.button #submit{
-  display: flex;
-  border-radius: 5px; 
-  border: none;
-  background-color: black;
-  color: white;
-  padding: 10px 32px;
-  margin-top: 10px; 
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-.books img{
-  display: flex;
-  padding: 10px;
-  margin-top: 10px;
-  height: auto;
-  width: auto;
+.mcq{
+  display:flex;	
 }
