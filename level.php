@@ -1,11 +1,8 @@
-<?php
-
+<?php 
 $servername = "localhost";
 $username = "halest_Lauryn-Pepe";
 $password = "meme123";
 $db_name = "halest_Lauryn-Pepe";
-
-$found = false; 
 
 $conn = new mysqli($servername, $username, $password, $db_name);
 
@@ -19,28 +16,15 @@ if(!$uname){
     echo "Uname was not in the form\n"; 
 }
 
-$pass=$_POST["password"]; 
-
-if(!$pass){
-    echo "Pass was not in the form\n"; 
-}
-
-$sql = "SELECT Username, Password FROM Users"; 
+$sql = "SELECT Level FROM Users WHERE Username = '$uname'"; 
 $result = $conn->query($sql); 
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        if($uname == $row["Username"] && $pass == $row["Password"]){
-            echo $uname. " Signed in! <br>"; 
-            $found = true; 
-        }
-    }
+    $res = $result->fetch_assoc(); 
+    $lv = $res["Level"]; 
+    echo $lv; 
 } else {
-    echo "Empty Database";
-}
-
-if(!$found){
-    echo "Invalid User";
+    echo "Invalid User"; 
 }
 
 $conn->close(); 

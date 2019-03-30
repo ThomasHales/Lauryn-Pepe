@@ -1,11 +1,8 @@
-<?php
-
+<?php 
 $servername = "localhost";
 $username = "halest_Lauryn-Pepe";
 $password = "meme123";
 $db_name = "halest_Lauryn-Pepe";
-
-$found = false; 
 
 $conn = new mysqli($servername, $username, $password, $db_name);
 
@@ -25,24 +22,22 @@ if(!$pass){
     echo "Pass was not in the form\n"; 
 }
 
-$sql = "SELECT Username, Password FROM Users"; 
+$email=$_POST["email"];
+
+if(!$email){
+    echo "Email was not in the form\n"; 
+}
+
+$sql = "SELECT Username FROM Users WHERE Username = '$uname'"; 
 $result = $conn->query($sql); 
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        if($uname == $row["Username"] && $pass == $row["Password"]){
-            echo $uname. " Signed in! <br>"; 
-            $found = true; 
-        }
-    }
+    echo "Invalid User"; 
 } else {
-    echo "Empty Database";
-}
-
-if(!$found){
-    echo "Invalid User";
+    echo $uname. " Signed in! <br>";
+    $sql = "INSERT INTO Users ". "(Username, Password, Email, Level) ". "VALUES ('$uname', '$pass', '$email', 1)";
+    $conn->query($sql); 
 }
 
 $conn->close(); 
-
 ?>
