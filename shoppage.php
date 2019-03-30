@@ -47,56 +47,56 @@
 					</tr>
 					<tr>
 						<td><img src="andthentherewerenone.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">And Then There Were None</td>
+						<td id="book-title">And Then There Were None</td>
 						<td id="author">Agatha Christie</td>
 						<td id="price">15.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="dracula.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">Dracula</td>
+						<td id="book-title">Dracula</td>
 						<td id="author">Bram Stoker</td>
 						<td id="price">20.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="thewitchandthewardrobe.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">The Lion The Witch and The Wardrobe</td>
+						<td id="book-title">The Lion The Witch and The Wardrobe</td>
 						<td id="author">C.S. Lewis</td>
 						<td id="price">18.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="gameofthrones.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">A Game Of Thrones</td>
+						<td id="book-title">A Game Of Thrones</td>
 						<td id="author">George R.R. Martin</td>
 						<td id="price">10.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="gonegirl.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">Gone Girl</td>
+						<td id="book-title">Gone Girl</td>
 						<td id="author">Gillian Flynn</td>
 						<td id="price">15.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="harrypotter.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">Harry Potter And The Philosopher's Stone</td>
+						<td id="book-title">Harry Potter And The Philosopher's Stone</td>
 						<td id="author">J.K. Rowling</td>
 						<td id="price">5.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="thegodfather.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">The God Father</td>
+						<td id="book-title">The God Father</td>
 						<td id="author">Mario Puzo</td>
 						<td id="price">21.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
 					</tr>
 					<tr>
 						<td><img src="frankenstein.jpg" alt="" border=3 height=100 width=100></img></td>
-						<td id="title">Frankenstein</td>
+						<td id="book-title">Frankenstein</td>
 						<td id="author">Mary Shelley</td>
 						<td id="price">25.99</td>
 						<td class = "add"><button type="button" id="cart" onclick="">Add to Cart</button>
