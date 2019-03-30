@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   </head>
   <body>
+  <div>
       <div id="banner">
           <h1 id="title">Lauryn-Pepe Online Bookstore</h1>
       </div>
@@ -24,7 +25,7 @@
       </div>
 
       <link rel="stylesheet" type="text/css" href="shop.css">
-      <main>
+      <main id="page">
         <form class="mcq" id="mcq">
           <p class="ques">Search by:</p>
           <input type="hidden" name="var" value="value">
@@ -46,10 +47,19 @@
             <input type="submit" id="submit" name="Button1" value="Search">
           </div>
         </form>
-      </div>
       <div id="books" class="books"><div id="book"><img id="bookimg" src=" "><a href="template.html"><p id="details">Title by Author $Price </p></a></div>
-      </div>
-    </main>
+      </main>
+    </div>
+
+    <div id="subform" style="display: none;">
+        <h1>Sign Up</h1>
+        <form id="signup" onsubmit="signUp()">
+            Username: <input type="text" id="signuser" name="username" required><br>
+            Password: <input type="password" id="signpass" name="password" required> <br>
+            Email: <input type="text" id="emailuser" name="email" required> <br>
+            <input class="button" type="submit" name="signsub" id="signsub" value="Sign Up">
+        </form>
+    </div>
     <script type="text/javascript" src="login.js"></script>
     <?php include 'shop.php'; ?>
   </body>
@@ -75,6 +85,20 @@ select{
 }
 
 .button #submit{
+  display: flex;
+  border-radius: 5px; 
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 32px;
+  margin-top: 10px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button #signsub{
   display: flex;
   border-radius: 5px; 
   border: none;
