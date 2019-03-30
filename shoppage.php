@@ -20,7 +20,7 @@
             <input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
             <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
             <input type="submit" style="display:none;">
-	    <button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
+	          <button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
           </form>
       </div>
 
