@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="navbar.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     </head>
     <body>
         <div id="banner">
@@ -13,12 +13,12 @@
             <a href="shoppage.php">Shop Screen</a>
             <a class="active" href="#contact">Contact Us</a>
             <form id="login" onsubmit="foo()">
-		<p id="text" style="display: none;"></p>
-		<button type="button" id="cart" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i></button>
+				<p id="text" style="display: none;"></p>
+				<button type="button" id="cart" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i></button>
                 <input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
                 <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
                 <input type="submit" style="display:none;">
-		<button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
+				<button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
             </form>
         </div>
         <link rel="stylesheet" type="text/css" href="contact.css" />
@@ -27,27 +27,15 @@
             <article>
               <h1>Contact Us</h1>
               <div class="tq">
-                <form enctype="text/plain" method="get" action="mailto:hannm@uwindsor.ca">
-                  <fieldset>
-                    <p class="ques">Name</p>
-                    <input type="hidden" name="var" value="value" />
-                    <input type="text" name="field1" /><br />
-                    <p class="ques">Subject</p>
-                    <input type="hidden" name="var" value="value" />
-                    <input type="text" name="field1" /><br />
-                    <p class="ques">Country</p>
-                    <input type="hidden" name="var" value="value" />
-                    <select name="mc">
-                      <option value="val1">Canada</option>
-                      <option value="val2">United States</option>
-                    </select>
-                    <p class="ques">Message</p>
-                    <input type="hidden" name="var" value="value" />
-                    <textarea name="field1" rows="15" cols="45" ></textarea><br />
-                    <input type="submit" name="Button1" value="Submit" />
-                    <input type="reset" value="Reset" />
-                  </fieldset>
-                </form>
+				<form method="post" action="send_mail.php">
+					<p>First Name</p>
+						<input type="text" name="first_name" required><br />
+					<p>Email </p>
+						<input type="email" name="email_address"><br />
+					<p>Comments</p>
+							<textarea name="comments" rows="15" cols="45"></textarea>
+					<p><button>Submit the form</button></p>
+				</form>
               </div>
             </article>
           </main>
