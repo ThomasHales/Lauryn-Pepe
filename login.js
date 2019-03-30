@@ -90,6 +90,7 @@ function signOut(){
         document.getElementById("password").style.display = 'inline';
         document.getElementById("button").style.display = 'none';
 	document.getElementById("text").style.display = 'none';
-	localStorage.clear();
+    localStorage.clear();
+    window.location.reload(true);
 }
 
