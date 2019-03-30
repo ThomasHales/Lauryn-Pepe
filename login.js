@@ -51,7 +51,7 @@ function checkLogin(){
         document.getElementById("text").style.display = 'inline';
         document.getElementById("text").innerHTML = 'Signed In As: '+namestored;
     }else{
-        var page = document.getElementById("page"); 
+            var page = document.getElementById("page"); 
             var subform = document.getElementById("subform"); 
             if(subform){
                 page.style.display = 'none'; 
