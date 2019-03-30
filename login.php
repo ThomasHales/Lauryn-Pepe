@@ -7,8 +7,6 @@ $db_name = "halest_Lauryn-Pepe";
 $formErr = array("Invalid User","Invalid Password Format","Invalid Username Format");
 $E = 0;
 
-$found = false; 
-
 $conn = new mysqli($servername, $username, $password, $db_name);
 
 if($conn->connect_error){
@@ -20,8 +18,8 @@ $uname=$_POST["username"];
 if(!$uname){
     echo "Uname was not in the form\n"; 
 } else{
-    if(!preg_match('/^[a-zA-Z0-9_-]+$/i', $uname)) {
-        $E=2;
+		if(!preg_match('/^[a-zA-Z0-9_-]+$/i', $uname)) {
+			$E=2;
     } 
 }
 
@@ -30,8 +28,8 @@ $pass=$_POST["password"];
 if(!$pass){
     echo "Pass was not in the form\n"; 
 } else{
-    if(!preg_match('/^[a-zA-Z0-9_-]+$/i', $pass)) {
-        $E++;
+		if(!preg_match('/^[a-zA-Z0-9_-]+$/i', $pass)) {
+			$E++;
     } 
 }
 
@@ -41,24 +39,19 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         if($uname == $row["Username"] && $pass == $row["Password"]){
-            $found = true; 
             echo "Signed In As: $uname <br>"; 
-         }else{
-	          if ($E >= 2){
-	            echo $formErr[2];
-	          } else if ($E == 1){
-	             echo $formErr[1];
-	          } else if ($E == 0){
-	             echo $formErr[0];
-	          }
+        }else{
+			if ($E >= 2){
+				echo $formErr[2];
+			} else if ($E == 1){
+				echo $formErr[1];
+			} else if ($E == 0){
+				echo $formErr[0];
+			}
         }
     }
 } else {
     echo "Empty Database";
-}
-
-if(!$found){
-    echo "Invalid User";
 }
 
 $conn->close(); 

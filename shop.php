@@ -87,6 +87,7 @@
     populate('<?php echo $key["title"]?>', '<?php echo $key["author"]?>', '<?php echo $key["price"]?>', '<?php echo $key["img"]?>');
 <?php } ?>
 
+
 function populate(title, author, price, img){
             document.getElementById("bookimg").src = img; 
             document.getElementById("details").innerHTML = title + " by: " + author + " $" + price + ".";
@@ -94,7 +95,6 @@ function populate(title, author, price, img){
             var cln = book.cloneNode(true); 
             document.getElementById("books").appendChild(cln);  
 }
-
 
 document.getElementById("books").firstChild.style.display = 'none';
 

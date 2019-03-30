@@ -1,0 +1,36 @@
+<!DOCTYPE html>	
+<html>
+    <head>
+        <link rel="stylesheet" href="navbar.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="banner">
+            <h1 id="title">Lauryn-Pepe Online Bookstore</h1>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Main Page</a>
+            <a href="shoppage.php">Shop Screen</a>
+            <a class="active" href="#contact">Contact Us</a>
+            <form id="login" onsubmit="foo()">
+				<p id="text" style="display: none;"></p>
+				<button type="button" id="cart" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i></button>
+                <input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
+                <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
+                <input type="submit" style="display:none;">
+				<button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
+            </form>
+        </div>
+        <link rel="stylesheet" type="text/css" href="contact.css" />
+        <div class="body">
+          <main>
+            <article>
+                <h1>Thanks for your feedback!</h1>
+                <p>We appreciate that you took the time to send us feedback. Your feedback has been sent to the webmaster.</p>
+                <p><a href="contact.html">Back</a></p>
+            </article>
+          </main>
+        </div>
+        <script type="text/javascript" src="login.js"></script>
+    </body>
+</html>
