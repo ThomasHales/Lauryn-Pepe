@@ -26,7 +26,7 @@
 	  
 		<link rel="stylesheet" type="text/css" href="cart.css" />
 		<div class="body">
-			<main>
+			<main id="shop">
 				<input type="text" id="myInput1" onkeyup="myFunction('myInput1', 1)" placeholder="Search for Book.." title="Type in a name">
 				<input type="text" id="myInput2" onkeyup="myFunction('myInput2', 2)" placeholder="Search for Author.." title="Type in a author">
 				
@@ -47,6 +47,15 @@
 						<th>&nbsp;</th>
 					</tr>
 				</table>
+				<form id="addForm" onsubmit="addBook()" style="display: none;">
+				Add Book <br>
+				Book Title: <input type="text" name="title" id="addtitle" size="30" required> 
+				Author's Name: <input type="text" name="author" id="addauthor" size="30" required> 
+				Genre: <input type="text" name="genre" id="addgenre" size="10" required>
+				Price: <input type="tel" name="price" id="addprice" size="10" required> 
+				Image: <input type="text" name="image" id="addimgref" size="30"required>
+				<input type="submit" name="sub" style="display: none;">
+				</form>
 
 				<script>
 					function myFunction(search, col) {
