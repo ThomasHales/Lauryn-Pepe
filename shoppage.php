@@ -13,14 +13,15 @@
           <a href="index.html">Main Page</a>
           <a class="active" href="#Screen">Shop Screen</a>
           <a href="contact.html">Contact Us</a>
-          <form id="login" onsubmit="foo()">
-			<p id="text" style="display: none;"></p>
-			<button type="button" id="cart" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i></button>
-            <input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
-            <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
-            <input type="submit" style="display:none;">
-			<button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
-          </form>
+            <form id="login" onsubmit="foo()">
+				<p id="text" style="display: none;"></p>
+				<button type="button" id="cart" onclick="location.href='cart.html'"><i class="">Sign Up</i></button>
+				<p id="text2" style="display: none;"></p>
+				<input type="text" id="username" name="username" value="" placeholder="Username" size = "10" required>
+                <input type="password" id="password" name="password" value="" placeholder="Password" size = "10" required> 
+                <input type="submit" style="display:none;">
+				<button type="button" id="button" style="display:none;" onclick="signOut()">Sign Out</button>
+            </form>
 		</div>
 	  
 		<link rel="stylesheet" type="text/css" href="cart.css" />
