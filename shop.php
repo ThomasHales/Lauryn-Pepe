@@ -88,11 +88,22 @@
 <?php } ?>
 
 function populate(title, author, price, img){
-            document.getElementById("bookimg").src = img; 
-            document.getElementById("details").innerHTML = title + " by: " + author + " $" + price + ".";
+			
+			var table = document.getElementById("myTable");
+			var row = table.insertRow(1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
             var book = document.getElementById("book"); 
             var cln = book.cloneNode(true); 
             document.getElementById("books").appendChild(cln);  
+			cell1.innerHTML = "<img src=" + "'" + img + "'" + "border=3 height=100 width=100/>";
+			cell2.innerHTML = title;
+			cell3.innerHTML = author;
+			cell4.innerHTML = price;
+			cell5.innerHTML = "button";
 }
 
 
