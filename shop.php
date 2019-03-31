@@ -102,8 +102,8 @@ function populate(title, author, price, img){
 			cell1.innerHTML = "<img src=" + "'" + img + "'" + "border=3 height=100 width=100/>";
 			cell2.innerHTML = title;
 			cell3.innerHTML = author;
-			cell4.innerHTML = price;
-			cell5.innerHTML = "button";
+            cell4.innerHTML = price;
+            cell5.innerHTML = '<button name="cartbutton" type="button" onclick="cart.html">Add To Cart</button> <br> <button name="deletebutton" type="button" style="display: none;" class="delete" onclick="deleteItem(\'' + title + '\')" >Delete</button>'; 
 }
 
 

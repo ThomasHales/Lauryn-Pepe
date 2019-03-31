@@ -1,4 +1,5 @@
 document.getElementById("login").addEventListener('submit', function(event){event.preventDefault();});
+document.getElementById("addForm").addEventListener('submit', function(event){event.preventDefault();});
 window.addEventListener("load", checkLogin());
 
 
@@ -23,7 +24,7 @@ function foo(){
                     xmlhttp.open("POST", "level.php", true);
                     xmlhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {   
-							localStorage.setItem("Level", this.responseText); 
+                            localStorage.setItem("Level", this.responseText); 
                         }
                      };
                     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
@@ -37,7 +38,6 @@ function foo(){
 }
 
 function checkLogin(){
-	
     var namestored = localStorage.getItem("username"); 
     if(namestored){
     document.getElementById("username").style.display = 'none';
@@ -46,7 +46,20 @@ function checkLogin(){
 	document.getElementById("text").style.display = 'none';
     document.getElementById("text2").style.display = 'inline';
     document.getElementById("text2").innerHTML = 'Signed In As: '+namestored;
-	document.getElementById("cart").innerHTML = "<i class='fas fa-shopping-cart'></i>"
+    document.getElementById("cart").innerHTML = "<i class='fas fa-shopping-cart'></i>"
+    var shop = document.getElementById("shop"); 
+    if(shop){
+        setTimeout(function(){
+        var lv = localStorage.getItem("Level");
+        if(lv.localeCompare("3") == 0){
+            var button = document.getElementsByClassName("delete"); 
+            for(var i = 0; i < button.length; ++i){
+                button[i].style.display = 'inline';
+            }
+            document.getElementById("addForm").style.display = 'inline';
+        }}, 100);
+    }
+
     }else{
 		document.getElementById("cart").innerHTML = "<i class=''>Sign Up</i>"
         var page = document.getElementById("page"); 
@@ -94,3 +107,31 @@ function signOut(){
     window.location.reload(true);
 }
 
+function deleteItem(e){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "delete.php", true);
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.reload(true);
+        }
+    };
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("title=" + e);
+}
+
+function addBook(){
+    var xmlhttp = new XMLHttpRequest();
+    var title = document.getElementById("addtitle").value; 
+    var author = document.getElementById("addauthor").value;
+    var genre = document.getElementById("addgenre").value;
+    var price = document.getElementById("addprice").value;
+    var imgref = document.getElementById("addimgref").value;
+    xmlhttp.open("POST", "add.php", true);
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.reload(true);
+        }
+    };
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("title=" + title + "&author=" + author + "&genre=" + genre + "&price=" + price + "&imgref=" + imgref);
+}
