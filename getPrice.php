@@ -16,7 +16,7 @@ if(!$title){
     echo "-1"; 
 }
 
-$sql = "SELECT Price FROM Users WHERE Title = '$title'"; 
+$sql = "SELECT Price FROM Books WHERE Title = '$title'"; 
 $result = $conn->query($sql); 
 
 if ($result->num_rows > 0) {
