@@ -51,7 +51,7 @@ function checkLogin(){
     if(shop){
         setTimeout(function(){
         var lv = localStorage.getItem("Level");
-        if(lv.localeCompare("3") == 0){
+        if(lv.localCompare("3") == 0){
             var button = document.getElementsByClassName("delete"); 
             for(var i = 0; i < button.length; ++i){
                 button[i].style.display = 'inline';
@@ -134,4 +134,28 @@ function addBook(){
     };
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("title=" + title + "&author=" + author + "&genre=" + genre + "&price=" + price + "&imgref=" + imgref);
+}
+
+function addToCart(name){
+    var books;
+    if(!localStorage.getItem('cartList')){
+        books={name: 1};
+    } else {
+        books = JSON.parse(localStorage.getItem('cartList'));
+        if(books[name]){
+            books[name]+=1;
+        }
+    }
+    localStorage.setItem('cartList', JSON.stringify(books));
+}
+
+function removeFromCart(name){
+    var books = JSON.parse(localStorage.getItem('cartList'));
+    if(books[name]>1){
+        books[name]-=1;
+    } else{
+        delete books[name];
+    }
+    localStorage.setItem('cartList', JSON.stringify(books));
+    window.location.reload(true);
 }
