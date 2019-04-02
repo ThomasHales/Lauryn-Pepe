@@ -13,7 +13,7 @@ if($conn->connect_error){
 $title=$_POST["title"]; 
 
 if(!$title){
-    echo "-1"; 
+    echo "Title was not in form"; 
 }
 
 $sql = "SELECT Price FROM Books WHERE Title = '$title'"; 

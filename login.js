@@ -1,5 +1,8 @@
 document.getElementById("login").addEventListener('submit', function(event){event.preventDefault();});
-document.getElementById("addForm").addEventListener('submit', function(event){event.preventDefault();});
+var addform = document.getElementById("addForm"); 
+if(addform){
+    addform.addEventListener('submit', function(event){event.preventDefault();});
+}
 window.addEventListener("load", checkLogin());
 
 
@@ -51,7 +54,7 @@ function checkLogin(){
     if(shop){
         setTimeout(function(){
         var lv = localStorage.getItem("Level");
-        if(lv.localCompare("3") == 0){
+        if(lv.localeCompare("3") == 0){
             var button = document.getElementsByClassName("delete"); 
             for(var i = 0; i < button.length; ++i){
                 button[i].style.display = 'inline';
