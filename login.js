@@ -147,6 +147,8 @@ function addToCart(name){
         books = JSON.parse(localStorage.getItem('cartList'));
         if(books[name]){
             books[name]+=1;
+        }else{
+            books[name] = 1;  
         }
     }
     localStorage.setItem('cartList', JSON.stringify(books));
@@ -160,5 +162,10 @@ function removeFromCart(name){
         delete books[name];
     }
     localStorage.setItem('cartList', JSON.stringify(books));
+    window.location.reload(true);
+}
+
+function checkout(){
+    localStorage.removeItem('cartList');
     window.location.reload(true);
 }
